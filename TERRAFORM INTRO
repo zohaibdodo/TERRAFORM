@@ -1,0 +1,67 @@
+Terraform:
+
+With the help of terraform we can codify our infrastructure.
+
+infrastructure means EC2, RT, LB, IGW, Autoscaling.
+
+History:
+It is a open source tool created by HashiCorp in 2014
+Written in GO language. Backend language
+It supports declarative configuration language known as HashiCorp configuration language.
+
+Why Terraform:
+It is easy then Ansible/Puppet/Chef.
+
+Ansible/Puppet are configuration management tools.
+Terraform comes in scenario when our focus is on building infrastructure instead of configuration management.
+
+Wht not CloudFormation:
+Cover almost all service which is provided by AWS.
+This service is free but support only AWS platform.
+
+How Terraform works:
+
+
+Advantages of Terraform:
+Open Source.
+Multi-tier application.
+Less human effort.
+
+How to install Terraform:
+Download
+move from /opt/terraform to /usr/bin
+export path to /root/.bashrc
+
+Create a user and give programmatic access with administrative policy.
+
+#aws configure 
+paste key from AWS portal.
+
+TERRAFORM BASIC COMMANDS:
+
+Terraform init
+Terraform plan
+Terraform apply
+Terraform validate      (Check syntax)
+Terraform fmt           (check indentation)
+Terraform providers     (AWS/GCP/VMWARE)
+Terraform show          (Make easy to read)
+
+
+TERRAFORM ADVANCE COMMAND:
+Terraform graph
+
+First install gvedit.exe
+
+#terraform graph > test.dot
+
+Terraform workspace
+
+#Terraform workspace new uat
+#Terraform workspace new prod
+
+- To Select
+#Terraform workspace select dev
+
+#terraform apply       Will goto main.tf file a create a instance
+ 

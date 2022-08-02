@@ -1,0 +1,22 @@
+Video 1: Introduction about Youtube playlist
+Video 2: Installation for Windows
+
+Download .exe from Terraform web site and Install it. Run cmd prompt and run #terraform --help
+Copy location and paste in Environmental variable path location.
+
+Video 3: Download from Terraform website, unzip it and export your binary path
+
+#export PATH=$PATH:$(pwd)
+
+#sudo cp terraform /usr/local/bin   #More preferred
+
+Video 5: Hello World Terraform Configuration
+
+// Will be a comment
+# Will also be a comment
+
+Create a file with tf format.
+
+output Hello1 {
+    value = "Hello World"
+}

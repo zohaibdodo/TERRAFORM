@@ -52,9 +52,15 @@ output printname {
 OR
 
 output printname {
-    value = "Hello $var.username"
+    value = "Hello ${var.username}"
 }
 
 Video 11: Pass a variable from command
 
 terraform plan -var "Zohaib Ahmed"
+
+Video 12: Multiple Variable
+
+output printname {
+    value = "Hello, ${var.username}, Your age is ${var.age}"
+}

@@ -110,3 +110,14 @@ output printfirst {
 }
 
 # Video 15: Function
+variable users {
+    type = list
+}
+
+output printfirst {
+    value = "${join(",",var.users)}
+}
+
+output upper{
+    value = "${upper(var.users[0])}"
+}

@@ -1,16 +1,19 @@
-Video 1: Introduction about Youtube playlist
-Video 2: Installation for Windows
+Youtube Videos by Gaurav Sharma
+
+
+# Video 1: Introduction about Youtube playlist
+# Video 2: Installation for Windows
 
 Download .exe from Terraform web site and Install it. Run cmd prompt and run #terraform --help
 Copy location and paste in Environmental variable path location.
 
-Video 3: Download from Terraform website, unzip it and export your binary path
+# Video 3: Download from Terraform website, unzip it and export your binary path
 
 #export PATH=$PATH:$(pwd)
 
 #sudo cp terraform /usr/local/bin   #More preferred
 
-Video 5: Hello World Terraform Configuration
+# Video 5: Hello World Terraform Configuration
 
 // Will be a comment
 # Will also be a comment
@@ -20,3 +23,90 @@ Create a file with tf format.
 output Hello1 {
     value = "Hello World"
 }
+
+To run above file you need run following command
+
+#terraform plan
+
+# Video 7: Hello World in JSON Format with helloworld.tf.json
+
+{
+    "output" : {
+        "hello1" : {
+            "value": "Hello World"
+        }
+        }
+
+}
+
+# Video 8: Multiple Block in Single Terraform File
+
+output "Firstoutputblock" {
+    value = "This is first hello world block"
+}
+
+output "Secondoutputblock" {
+    value = "This is second hello world block"
+}
+
+simply run above file with terraform plan command
+
+# Video 9: Multiple Terraform file in Same Directory
+
+Prepare three output block file with above code and run terraform plan
+
+It shows/load files in alphabetic order
+
+# Video 10: Variable
+
+variable username {}
+
+output printname {
+    value = var.username  #Without inverted commas to print variable name
+}
+
+OR
+
+output printname {
+    value = "Hello ${var.username}"
+}
+
+# Video 11: Pass a variable from command
+
+terraform plan -var "username=Zohaib Ahmed"
+
+# Video 12: Multiple Variable
+
+output printname {
+    value = "Hello, ${var.username}, Your age is ${var.age}"
+}
+
+For Default variable:
+
+variable username {
+    default = "World" 
+}
+  
+# Video 13: Variable Type
+
+variable username {
+    type = string
+    default = "World"
+}
+
+variable age {
+    type = number
+    default = "World"
+}
+
+# Video 14: List Variables
+
+variable users {
+    type = list
+}
+
+output printfirst {
+    value = " First user is ${var.users[0]}"
+}
+
+# Video 15: Function

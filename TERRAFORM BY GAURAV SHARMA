@@ -109,7 +109,7 @@ output printfirst {
     value = " First user is ${var.users[0]}"
 }
 
-terraform plan -var 'users=["zohaib",ahmed","shabbir"]'
+#terraform plan -var 'users=["zohaib",ahmed","shabbir"]'
 
 # Video 15: Function
 variable users {
@@ -118,7 +118,7 @@ variable users {
 
 # For Join function:
 output printfirst {
-    value = "${join(",",var.users)}
+    value = "${join(",",var.users)}"
 }
 
 # For Upper function:
@@ -137,3 +137,61 @@ output lowercase {
 output helloworldtitle {
     value = "${title(var.users[2])}"
 }
+
+# Video 16: Map Variable
+
+variable "userage" {
+	type = map
+	default = {
+		zohaib = 35
+		alishbah = 3
+	}
+}
+
+output Map_Variable {
+	value = "My name is Alishbah and my age is ${lookup(var.userage, "alishbah")}"
+}
+
+# Video 17: How to use map variable Dynamically
+
+variable "userage" {
+        type = map
+        default = {
+                zohaib = 35
+                alishbah = 3
+        }
+}
+
+variable "username" {
+        type = string
+}
+
+output Map_Variable_Dynamically {
+        value = "My name is ${var.username} and my age is ${lookup(var.userage, "${var.username}")}"
+}
+
+#terraform plan -var 'username=zohaib'
+
+# Video 18: TFVARs Files in terraform
+
+Create a file with name of "terraform.tfvars" in same directory.
+
+age=23
+username=zohaib
+
+#Create another file with any name :
+
+variable age {
+        type = number
+}
+
+variable username {
+        type = string
+}
+
+output Print_Variable_Names_From_File {
+        value = "Hello, ${var.username}, your age is ${var.age}"
+}
+
+# Video 19: TFVARs Files With Different Name ( custom TFVARs Files )
+

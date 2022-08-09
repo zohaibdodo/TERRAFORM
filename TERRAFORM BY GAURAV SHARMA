@@ -195,3 +195,16 @@ output Print_Variable_Names_From_File {
 
 # Video 19: TFVARs Files With Different Name ( custom TFVARs Files )
 
+terraform plan -var-filename=development.tfvars
+
+# Video 20: Read Environment Variable in Terraform Configurations
+
+To read environment variables 
+
+To define a variable on environment we pass following command
+
+export $userfirstname=Anaya
+
+For Terraform Environment variable:
+
+TF_VAR_userfirstname=Anaya

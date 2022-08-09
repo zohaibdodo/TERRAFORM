@@ -109,15 +109,31 @@ output printfirst {
     value = " First user is ${var.users[0]}"
 }
 
+terraform plan -var 'users=["zohaib",ahmed","shabbir"]'
+
 # Video 15: Function
 variable users {
     type = list
 }
 
+# For Join function:
 output printfirst {
     value = "${join(",",var.users)}
 }
 
+# For Upper function:
 output upper{
     value = "${upper(var.users[0])}"
+}
+
+#For Lower function:
+
+output lowercase {
+    value = "${lower(var.users[1])}"
+}
+
+# For Title function:
+
+output helloworldtitle {
+    value = "${title(var.users[2])}"
 }

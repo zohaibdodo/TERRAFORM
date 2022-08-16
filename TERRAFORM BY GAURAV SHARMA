@@ -9,9 +9,9 @@ Copy location and paste in Environmental variable path location.
 
 # Video 3: Download from Terraform website, unzip it and export your binary path
 
-#export PATH=$PATH:$(pwd)
+export PATH=$PATH:$(pwd)
 
-#sudo cp terraform /usr/local/bin   #More preferred
+sudo cp terraform /usr/local/bin   #More preferred
 
 # Video 5: Hello World Terraform Configuration
 
@@ -24,9 +24,9 @@ output Hello1 {
     value = "Hello World"
 }
 
-To run above file you need run following command
+#To run above file you need run following command
 
-#terraform plan
+terraform plan
 
 # Video 7: Hello World in JSON Format with helloworld.tf.json
 
@@ -53,6 +53,8 @@ simply run above file with terraform plan command
 
 # Video 9: Multiple Terraform file in Same Directory
 
+It will read all the files in exisiting directory where you have run terraform plan command.
+
 Prepare three output block file with above code and run terraform plan
 
 It shows/load files in alphabetic order
@@ -62,7 +64,7 @@ It shows/load files in alphabetic order
 variable username {}
 
 output printname {
-    value = var.username  #Without inverted commas to print variable name
+    value = ${var.username}  #Without inverted commas to print variable name
 }
 
 OR
@@ -86,6 +88,8 @@ For Default variable:
 variable username {
     default = "World" 
 }
+
+terraform plan -var "username=ZohaibAhmed" -var "age=35"
   
 # Video 13: Variable Type
 
@@ -109,7 +113,9 @@ output printfirst {
     value = " First user is ${var.users[0]}"
 }
 
-#terraform plan -var 'users=["zohaib",ahmed","shabbir"]'
+Make sure you entered input in the form of list. like [ "zohaib","ahmed","shabbir" ]
+
+terraform plan -var 'users=["zohaib",ahmed","shabbir"]'
 
 # Video 15: Function
 variable users {

@@ -170,7 +170,7 @@ output Map_Variable_Dynamically {
         value = "My name is ${var.username} and my age is ${lookup(var.userage, "${var.username}")}"
 }
 
-#terraform plan -var 'username=zohaib'
+"#terraform plan -var 'username=zohaib'"
 
 # Video 18: TFVARs Files in terraform
 
@@ -208,3 +208,65 @@ export $userfirstname=Anaya
 For Terraform Environment variable:
 
 TF_VAR_userfirstname=Anaya
+
+#Video 21 : Explain about providers
+
+AWS
+GCP
+AZURE
+
+# Video 22: Creating first Terraform Resource - (GitHub Repository)
+
+Search Github provider
+
+provider "github" {
+
+}
+
+# Video 23: Terraform apply
+
+Go to your github account in developer settings and generate new personal token.
+
+Add token variable in provider 
+
+token = "value"
+
+terraform apply --auto-approve
+
+# Video 24: Terraform .tfstate file and destory command
+
+tfstate file store all the information from terraform apply command.
+
+Terraform destory to destory all the information from tfstate file.
+
+# Video 25: Terraform destory
+
+terraform destory --target github_repository.terraform_local
+
+# Video 26: Terraform Validate Command
+
+terraform validate
+
+You may seperate all the file like provider, resource and terraformtfvar
+
+# Video 27:  Terraform Refresh & Show
+
+terraform refresh
+terraform show          #for terminal
+
+# Video 28: Terraform Output
+
+# Video 29: Terraform console
+
+Terraform console
+
+For debugging of variables in console mode
+
+# Video 30: Terraform FMT
+
+If indendation (like multiple space or space not available) is not proper then we use FMT command.
+
+# Video 31: Create First Resource (Manual Steps) on AWS (Create EC2 Instance On AWS)
+
+
+

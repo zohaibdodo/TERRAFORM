@@ -253,9 +253,11 @@ terraform destory --target github_repository.terraform_local
 
 terraform validate
 
-You may seperate all the file like provider, resource and terraformtfvar
+You may seperate all the files like provider, resource and terraformtfvar
 
 # Video 27:  Terraform Refresh & Show
+
+If you have made changes in github repo so terraform would be unaware that changes so terraform refresh command will update it.
 
 terraform refresh
 terraform show          #for terminal

@@ -3,7 +3,7 @@ output printfirst {
 }
 output helloworldupper {
 }
-   value = " $ { join ( " --- > " , var.users ) } "
+   value = " $ { join ( " ---  " , var.users ) } "
 }
    value = " $ { upper ( var.users [ 0 ] ) } "
 output helloworldlower {

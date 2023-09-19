@@ -5,7 +5,7 @@ Youtube Videos by Gaurav Sharma
 # Video 2: Installation for Windows
 
 Download .exe from Terraform web site and Install it. Run cmd prompt and run #terraform --help
-Copy location and paste in Environmental variable path location.
+Copy location and paste in Environmental variable path location in advance system settings in My Computer.
 
 # Video 3: Download from Terraform website, unzip it and export your binary path
 
